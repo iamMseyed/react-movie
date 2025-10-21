@@ -61,7 +61,7 @@ function App() {
     } catch (error) {
       setErrorMessage(error.message || 'Error occurred!');
     } finally {
-      // setIsLoading(false);
+       setIsLoading(false);
     }
   };
 
