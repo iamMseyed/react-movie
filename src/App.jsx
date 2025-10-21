@@ -3,7 +3,7 @@ import { Search } from './components/Search.jsx';
 import './index.css';
 import Spinner from './components/Spinner.jsx';
 import MovieCard from './components/MovieCard.jsx';
-import MovieDetails from './components/MovieDetails.jsx'; // ✅ NEW
+import MovieDetails from './components/MovieDetails.jsx';
 import { useDebounce } from 'react-use';
 
 const API_BASE_URL = 'https://api.themoviedb.org/3';
@@ -25,7 +25,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(null);
-  const [selectedMovie, setSelectedMovie] = useState(null); // ✅ NEW
+  const [selectedMovie, setSelectedMovie] = useState(null); 
 
   useDebounce(() => {
     setDebouncedSearch(searchTerm);
@@ -61,7 +61,7 @@ function App() {
     } catch (error) {
       setErrorMessage(error.message || 'Error occurred!');
     } finally {
-      setIsLoading(false);
+      // setIsLoading(false);
     }
   };
 
